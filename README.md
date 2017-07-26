@@ -16,7 +16,7 @@ docker run \
     -e CRON_SCHEDULE="*/5 * * * *" \
     -e CRON_COMMAND="sh /my/script.sh" \
     -e CONTAINER=app \
-    tmannherz/docker-cron
+    tmannherz/cron
 ```
 
 ## Use with `docker-compose`
@@ -28,7 +28,7 @@ services:
     ...
 
   cron:
-    image: tmannherz/docker-cron
+    image: tmannherz/cron
     depends_on:
       - app
     restart: always
