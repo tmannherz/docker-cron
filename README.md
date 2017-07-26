@@ -1,6 +1,6 @@
 # docker-cron
 
-An image to run a scheduled cron task on an existing, runnging container. The host's Docker socket must be mounted to the cron container when run so it can connect to the other, running container using `docker exec`.
+An image to run a scheduled cron task on an existing, running container. The host's Docker socket must be mounted to the cron container when run so it can connect to the other, running container using `docker exec`.
 
 ## Environment Variables
 
@@ -15,7 +15,7 @@ docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e CRON_SCHEDULE="*/5 * * * *" \
     -e CRON_COMMAND="sh /my/script.sh" \
-    -e CONTAINER=safedinar_php_1 \
+    -e CONTAINER=app \
     tmannherz/docker-cron
 ```
 
