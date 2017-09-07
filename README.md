@@ -10,7 +10,7 @@ An image to run a scheduled cron task on an existing, running container. The hos
 
 ## Run
 
-```
+```shell
 docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e CRON_SCHEDULE="*/5 * * * *" \
@@ -21,7 +21,7 @@ docker run \
 
 ## Use with `docker-compose`
 
-```$yaml
+```yaml
 services:
   app:
     container_name: app

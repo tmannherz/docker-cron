@@ -20,7 +20,7 @@ touch $TASK
 chmod 0644 $TASK
 
 COMMAND="$CRON_SCHEDULE root /runner.sh >> /var/log/cron.log 2>&1"
-echo "$COMMAND" >> $TASK
+echo "$COMMAND" > $TASK
 echo "# End" >> $TASK
 
 if [ "$1" == "" ]; then
